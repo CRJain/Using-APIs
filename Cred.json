@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ferrous-amphora-253504",
+  "private_key_id": "70fdd003096e85c869925d0bb28392fa0f720c64",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwWMnhPbgQYeFc\nNmQ+76coF/c5hPvpbqtq4GDkF9j7SFbOSdd5+3U11s5VNiC/eQnEsmv3L5GRfzaa\n1r0wbPvHi/TNdR+si4cEQNQaoHHKlTdpXCCWKKpopfl/0nPcmDJ8J1zn54HyC3xw\naIQ1VP2r2DhhBmJLKWiWuYYitD3NCPvemottUlAeMXAfI+CzkL8NiXH4CnPaslpN\n0SJLziJINtx+ATN/Hdmx1FFoUKJacG5x1qYMhUVgTwrFsHzV18ghjTO5xINRG6N9\nTx3+48YguxglgF7A+OF5XpJ1Ocvgnay+ReGRZz3IJPG81XXxeYIrTBuRpA046zzo\n6arIWdxDAgMBAAECggEAFgCuB6V8vsaHqMq8jUG3mIAM/6dBCyocxzQBwtPa5ddr\nxUdfVD/0qugHTIh5Y4qFln4wjGHqBr5ZoM4kQtOGQqqKu8veTNgH25b/H+de60jc\n5g9xnWqrgG0dCT7H6AExY15B8ElpZDrcpuXTgRf+op9SwYBbaUdcXln9i3zzrQ45\nu6fC0bCmk0eDTweF7wt4+BdzB06C1KbFY0ICSaRYn3vLQiEt1lZx3u5Ihu1uOVvY\n+dFmxt8E4rbp65NyWgwPBUcWbO4LNxJHYqf/YfSYCvgVAYGkm1zM8/tRTCBaDHrM\nPiAs2YKPp8vmFnbnIXOTv3YT7bGipHmYBCFHQ7apmQKBgQDk73m5i7WEJPQtnO01\nT2f/u72YrnBqKGRWwik+Ffj83/GG7Fp3UCSbVTAJJRNpdd2qy6sNUo1CiK7ETwjo\nQwr/cLhcZKB7XTboVXKUCxl/aU5iwJ1UX1LHj2++BDrFK2OqE2drFLUl1IbOm/Fm\nF3bRnNnWTBJtgkOIgs3hFeKh5wKBgQDFMcQaoBpUseMbi5xrYZxNX98ZWZU2Ve3m\nLaioNH9zHg82Q5ak5+2vRpCza8iQ/47XIfqdActP1dkL/1S2TqmPo2WtmXBKii86\nbAlur2JmCZo67sZ8FufOMC2XoPBOaC8fySFOBD5YXvQET4oA4CfoaFHK7gwWbWt8\nPf6g32TfRQKBgGtKeCem/Ci0EOOXmevUDQ9i8xYtGm4GBBBM6ns4XPpWEaGD/1nP\na3iI0fxXLePM41f6H24c9CrsV8uUpr4DPZI9R4m1dyiZpPP5p7sOAKMfvSa20oUK\nL4drB5lr7gcdsJWyhlM+3y6djZgiqV2JPZw7ADRYboJ3/CJr+wSz9wSdAoGBALXx\n/iQm90SQQaEnxvKZRLNrsxjbvD4/ONs547UXg0T/Rj/mSvfq+zbPIDI8T/nhorVD\nJ854WlRWVwan10zC9daPiACOY7qTF5KLHoTfFCZb089ugvr503Y+o8KU/0UJAfoN\nBUrLxY6aRgI4NXgrWwcoQdfAnqyO1y7ysJ9Un+kVAoGAM3I7fdMc20CN29uQYen5\nMW/BYz+309uLe1RXlcW546bTgBbqiNn1ierHGOC4CG5Wcovd+VSTfVibLzsq1YdY\n6mmzyN53I2z+Jllfv0NOuTaBP6YZ+UUewZIL7SaUfUfWUZyt6MHuI0FvPBd5WcuT\nlMZjd6wAh3SNl9l67j6HSmo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "crjain@ferrous-amphora-253504.iam.gserviceaccount.com",
+  "client_id": "118229554057280354965",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/crjain%40ferrous-amphora-253504.iam.gserviceaccount.com"
+}
