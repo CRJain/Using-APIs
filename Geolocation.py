@@ -9,7 +9,7 @@ scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/aut
 creds = ServiceAccountCredentials.from_json_keyfile_name("Cred.json", scope)
 client = gspread.authorize(creds)
 sheet = client.open("GeolocationDemo").sheet1 #Change here
-gmaps_key = googlemaps.Client(key = api_key) #Change here
+gmaps_key = googlemaps.Client(key = gmap_key.api_key) #Change here
 
 row = sheet.row_values(1)
 adr_index = 1
