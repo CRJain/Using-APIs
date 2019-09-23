@@ -8,10 +8,11 @@ import gmap_key
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("Cred.json", scope)
 client = gspread.authorize(creds)
-sheet = client.open("GeolocationDemo").sheet1 #Change here
-gmaps_key = googlemaps.Client(key = gmap_key.api_key) #Change here
+sheet = client.open("GeolocationDemo")
+sheetId = sheet.worksheet("Sheet1")
+gmaps_key = googlemaps.Client(key = gmap_key.api_key)
 
-row = sheet.row_values(1)
+row = sheetId.row_values(1)
 adr_index = 1
 area_index = 1
 lat_index = 1
@@ -34,9 +35,9 @@ for i in row:
         break
     long_index += 1
 
-col = sheet.col_values(1)
+col = sheetId.col_values(1)
 for i in range(2, len(col)+1):
-    row = sheet.row_values(i)
+    row = sheetId.row_values(i)
     geocode_result = gmaps_key.geocode("{}, {}, Udaipur, India".format(row[adr_index-1], row[area_index-1]))
     try:
         lat = geocode_result[0]["geometry"]["location"]["lat"]
@@ -44,5 +45,55 @@ for i in range(2, len(col)+1):
     except:
         lat = None
         lng = None
-    sheet.update_cell(i, lat_index, lat)
-    sheet.update_cell(i, long_index, lng)
+    sheetId.update_cell(i, lat_index, lat)
+    sheetId.update_cell(i, long_index, lng)
+
+reqs = {
+    "requests": [
+        {
+            "repeatCell": {
+                "range": {
+                    "endRowIndex": 1
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                    "backgroundColor": {
+                        "red": 1.0,
+                        "green": 8.0,
+                        "blue": 0.0
+                    },
+                    "horizontalAlignment" : "CENTER",
+                    "textFormat": {
+                        "foregroundColor": {
+                        "red": 0.0,
+                        "green": 0.0,
+                        "blue": 0.0
+                        },
+                        "fontSize": 12,
+                    }
+                    }
+                },
+                "fields": "userEnteredFormat(backgroundColor,textFormat,horizontalAlignment)"
+            },
+            "setDataValidation": {
+                "range": {
+                    "startRowIndex": 1,
+                    "endRowIndex": len(col),
+                    "startColumnIndex": 4,
+                    "endColumnIndex": 5
+                },
+                "rule": {
+                    "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                            {"userEnteredValue": "PENDING"},
+                            {"userEnteredValue": "VISITED"}
+                        ]
+                    },
+                    "showCustomUi": True
+                }
+            }
+        }
+    ]
+}
+sheet.batch_update(reqs)
